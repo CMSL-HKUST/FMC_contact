@@ -49,11 +49,11 @@ Contact forces are derived as the gradient of a a volume-based energy function. 
 
 ## Features
 
-:fish: **Complex geometry handling**: Overcome limitations of traditional methods at non-smooth boundaries
+:fish: **Complex geometry handling**: Derive contact forces from energy gradients, avoiding projection issues at corners and edges.  
 
-:star: **Non-matching mesh support**: Eliminate contact pair search, master-slave identification, and projection iterations
+:star: **Non-matching mesh support**: Remove contact pair search, master–slave setup, and projection iterations for non-matching meshes.
 
-:snowflake: **Easy solver integration**: Incorporate contact forces directly into residual vector
+:snowflake: **Easy solver integration**: Incorporate contact forces directly into discretized weak forms like an ``add-on''
 
 ## Installation
 
