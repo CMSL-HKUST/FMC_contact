@@ -286,7 +286,7 @@ class DynamicContactSolver():
             'max_a_y': np.max(np.abs(a2[:, 1]))
         }
         
-        # 能量状态
+     
         KE = self._compute_kinetic_energy()
         PE_energy = self._compute_elastic_energy()
         PE_contact = self._compute_contact_energy()
@@ -322,17 +322,17 @@ class DynamicContactSolver():
         E2 = self.elasticity2.E  # Young's modulus2
         nu2 = self.elasticity2.nu  # Poisson's ratio2
         rho2 = self.elasticity2.rho  # density2
-        # 2. compute the wave speed
+        # compute the wave speed
         # c = sqrt(E*(1-nu)/((1+nu)*(1-2*nu)*rho))
         wave_speed1 = np.sqrt((E1 * (1 - nu1)) / ((1 + nu1) * (1 - 2*nu1) * rho1))
         wave_speed2 = np.sqrt((E2 * (1 - nu2)) / ((1 + nu2) * (1 - 2*nu2) * rho2))
-        # 3. get the minimum cell size
+        # get the minimum cell size
         dx_min1 = 0.006
         dx_min2 = 0.004
-        # 4. compute the critical time step
+        # compute the critical time step
         dt_c1 = dx_min1 / wave_speed1
         dt_c2 = dx_min2 / wave_speed2
-        # 5. get the minimum value of the two elastic bodies
+        # get the minimum value of the two elastic bodies
         dt_critical = min(dt_c1, dt_c2)
         logger.info(f"critical timestep: dt_c1={dt_c1:.2e}, dt_c2={dt_c2:.2e}")
         return dt_critical
@@ -349,7 +349,7 @@ class DynamicContactSolver():
         if hasattr(self.elasticity1, 'F_contact') and hasattr(self.elasticity2, 'F_contact'):
             F_contact1 = self.elasticity1.F_contact  
             F_contact2 = self.elasticity2.F_contact  
-            # 计算每个物体的x、y方向合力
+            
             F1_x = np.sum(F_contact1[:, 0])  
             F1_y = np.sum(F_contact1[:, 1])  
             F2_x = np.sum(F_contact2[:, 0])  
@@ -360,7 +360,7 @@ class DynamicContactSolver():
             F1_y = 0.0
             F2_x = 0.0
             F2_y = 0.0
-        # 获取接触面积
+        
         contact_info = self.contact_problem.get_contact_info()
         if contact_info:
             contact_area = contact_info.get('contact_area', 0.0)

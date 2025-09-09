@@ -27,7 +27,7 @@ def save_sol1(problem, sol, vtk_path, contact_problem=None):
     force_vector = np.hstack((F_contact, np.zeros((len(F_contact), 1))))
     sol_3d = onp.array(sol.reshape(-1, problem.fes[0].vec))
     sol_3d = np.hstack((sol_3d, np.zeros((sol_3d.shape[0], 1))))
-    # 6. save the VTK
+    # save the VTK
     save_sol(problem.fes[0], sol_3d, vtk_path,
              cell_infos=[('sigma_xx', onp.array(stress_xx, dtype=onp.float32)),
                         ('sigma_yy', onp.array(stress_yy, dtype=onp.float32)),
@@ -35,7 +35,7 @@ def save_sol1(problem, sol, vtk_path, contact_problem=None):
                         ('von_mises', onp.array(von_mises, dtype=onp.float32))],
              point_infos=[('contact_force', onp.array(force_vector))])
     
-    # 7. save the sampling box
+    # save the sampling box
     if contact_problem is not None:
 
         contact_info = contact_problem.get_contact_info()
@@ -47,7 +47,7 @@ def save_sol1(problem, sol, vtk_path, contact_problem=None):
                 cells={'line': box_lines}
             ).write(box_vtk_path)
 
-    # 8. save the rigid body boundary
+    # save the rigid body boundary
     rigid_points = problem.rigid_body_params 
     # create the line of the rigid body
     rigid_cells = np.array([[i, (i+1)%len(rigid_points)] 

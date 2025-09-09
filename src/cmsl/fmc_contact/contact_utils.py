@@ -64,7 +64,7 @@ def is_point_in_contact_zone_body2(point, scale_factor=SCALE_FACTOR):
 def compute_contact_parameters(contact_info, problem):
     """get the parameters for the energy model"""
     contact_area = contact_info['contact_area']
-    # 1. get the stiffness parameter and power parameter
+    # get the stiffness parameter and power parameter
     K = problem.contact_params['K']
     n = problem.contact_params['n']
     # compute the dPsi_dV

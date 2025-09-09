@@ -121,7 +121,7 @@ python -m examples.dynamics.main
 
 This project is licensed under the GNU General Public License v3 - see the [LICENSE](https://www.gnu.org/licenses/) for details.
 
-## Citations
+<!-- ## Citations
 
 If you found this library useful, we appreciate your support if you consider citing the following paper:
 
@@ -143,4 +143,4 @@ booktitle={The Twelfth International Conference on Learning Representations},
 year={2024},
 url={https://openreview.net/forum?id=sP1tCl2QBk}
 }
-```
+``` -->

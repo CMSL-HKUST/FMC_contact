@@ -108,5 +108,5 @@ def contact_solver(elasticity1, contact_problem, sol1_init, solver_params=None):
 
 
 
-## dynamic contact solver
+
 

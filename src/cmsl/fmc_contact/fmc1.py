@@ -46,7 +46,7 @@ def generate_fibers(rigid_body_params, updated_elements, n_fibers: int, fiber_le
     """define the sampling box"""
     box_x_min, box_x_max, box_y_min, box_y_max = define_sampling_box(rigid_body_params, updated_elements)
     
-    # 2. enlarge the sampling box
+    # enlarge the sampling box
     large_box_x_min = box_x_min - 2*fiber_length
     large_box_x_max = box_x_max + 2*fiber_length
     large_box_y_min = box_y_min - 2*fiber_length
@@ -118,7 +118,7 @@ def fiber_monte_carlo(problem, rigid_body_params, contact_problem, sol, fibers):
         'fiber': fibers['fibers'],
         'box_params': fibers['box_params']
     }
-    # 9. if there is no contact
+    # if there is no contact
     if contact_info['contact_area'] < contact_problem.contact_params['area_threshold']:
         return {
             'contact_area': 0.0,
