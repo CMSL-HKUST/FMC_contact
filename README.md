@@ -126,10 +126,10 @@ This project is licensed under the GNU General Public License v3 - see the [LICE
 If you found this library useful, we appreciate your support if you consider citing the following paper:
 
 ```bibtex
-@article{xu2025difflib,
-  title={DiffLiB: High-fidelity differentiable modeling of lithium-ion batteries and efficient gradient-based parameter identification},
-  author={Xu, Weipeng and Yang, Kaiqi and Zhang, Yuzhi and Sun, Shichao and Mao, Sheng and Xue, Tianju},
-  journal={arXiv preprint arXiv:2504.20674},
+@article{,
+  title={},
+  author={Wang, Xinyu and Xu, Weipeng and Xue, Tianju},
+  journal={},
   year={2025}
 }
 ```
