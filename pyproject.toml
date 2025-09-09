@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmc-contact"
+version = "0.1.0"
+requires-python = ">=3.9"
+description = "Contact simulation based on Fiber Monte Carlo within FEM framework"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[tool.setuptools]
+packages = ["src", "src.cmsl", "src.cmsl.fmc_contact", "jax_fem"]
+package-dir = {"" = "."}
