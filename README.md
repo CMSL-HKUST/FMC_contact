@@ -121,16 +121,17 @@ python -m examples.dynamics.main
 
 This project is licensed under the GNU General Public License v3 - see the [LICENSE](https://www.gnu.org/licenses/) for details.
 
-<!-- ## Citations
+## Citations
 
 If you found this library useful, we appreciate your support if you consider citing the following paper:
 
 ```bibtex
-@article{,
-  title={},
+@article{wang2025sovling,
+  title={Solving contact problems using Fiber Monte Carlo},
   author={Wang, Xinyu and Xu, Weipeng and Xue, Tianju},
-  journal={},
-  year={2025}
+  journal={arXiv preprint arXiv:2509.08609},
+  year={2025},
+  url={https://arxiv.org/abs/2509.08609}
 }
 ```
 
@@ -143,4 +144,4 @@ booktitle={The Twelfth International Conference on Learning Representations},
 year={2024},
 url={https://openreview.net/forum?id=sP1tCl2QBk}
 }
-``` -->
+```
