@@ -123,7 +123,7 @@ This project is licensed under the GNU General Public License v3 - see the [LICE
 
 ## Citations
 
-If you found this library useful, we appreciate your support if you consider citing the following paper:
+If you find this work useful, please consider citing the following paper:
 
 ```bibtex
 @article{wang2025sovling,
@@ -132,16 +132,5 @@ If you found this library useful, we appreciate your support if you consider cit
   journal={arXiv preprint arXiv:2509.08609},
   year={2025},
   url={https://arxiv.org/abs/2509.08609}
-}
-```
-
-```bibtex
-@inproceedings{
-richardson2024fiber,
-title={Fiber Monte Carlo},
-author={Nick Richardson and Deniz Oktay and Yaniv Ovadia and James C Bowden and Ryan P Adams},
-booktitle={The Twelfth International Conference on Learning Representations},
-year={2024},
-url={https://openreview.net/forum?id=sP1tCl2QBk}
 }
 ```
